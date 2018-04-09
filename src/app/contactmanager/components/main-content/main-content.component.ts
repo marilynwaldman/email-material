@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user';
+import { Sender } from '../../models/sender';
 import { ActivatedRoute } from '@angular/router';
-import { UserService } from '../../services/user.service';
+import { SenderService } from '../../services/sender.service';
 
 @Component({
   selector: 'app-main-content',
@@ -10,22 +10,22 @@ import { UserService } from '../../services/user.service';
 })
 export class MainContentComponent implements OnInit {
 
-  user: User;
+  sender: Sender;
   constructor(
     private route: ActivatedRoute,
-    private service: UserService) { }
+    private service: SenderService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       let id = params['id'];
       if (!id) id = 1;
-      this.user = null;
+      this.sender = null;
 
-      this.service.users.subscribe(users => {
-        if (users.length == 0) return;
+      this.service.senders.subscribe(senders => {
+        if (senders.length == 0) return;
 
         setTimeout(() => {
-          this.user = this.service.userById(id);
+          this.sender = this.service.senderById(id);
         }, 500);
       });
 
