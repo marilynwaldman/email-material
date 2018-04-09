@@ -1,7 +1,7 @@
 export class Email {
     id: number;
     logDate: string;
-    emailDate: string;
+    emailDate: Date;
     emailId: string;
     senderName: string;
     subject: string;

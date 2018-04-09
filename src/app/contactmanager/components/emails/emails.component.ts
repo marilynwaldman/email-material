@@ -11,7 +11,7 @@ export class EmailsComponent implements OnInit {
 
   @Input() emails: Email[];
 
-  displayedColumns = ['position', 'subject', 'date'];
+  displayedColumns = ['position', 'date', 'time', 'subject'];
   dataSource: MatTableDataSource<Email>;
 
   constructor() { }

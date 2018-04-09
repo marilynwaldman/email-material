@@ -20,6 +20,7 @@ export class SenderService {
 
   get senders(): Observable<Sender[]> {
     console.log("senders " + this._senders);
+  
     return this._senders.asObservable();
   }
 
