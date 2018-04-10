@@ -21,6 +21,13 @@
           <mat-header-cell *matHeaderCellDef mat-sort-header> Time </mat-header-cell>
           <mat-cell *matCellDef="let email"> {{email.emailDate| date:'HH:mm:ss'}} </mat-cell>
         </ng-container>
+
+        <ng-container matColumnDef="sender">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Sender </mat-header-cell>
+            <mat-cell *matCellDef="let email"> {{email.senderName}} </mat-cell>
+          </ng-container>
+           
+     
   
       <ng-container matColumnDef="subject">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Subject </mat-header-cell>

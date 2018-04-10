@@ -10,10 +10,8 @@ import { ContactmanagerAppComponent } from './contactmanager-app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-//import { UserService } from './services/user.service';
 import { SenderService } from './services/sender.service';
 import { HttpClientModule } from '@angular/common/http';
-//import { NotesComponent } from './components/notes/notes.component';
 import { EmailsComponent } from './components/emails/emails.component';
 
 
